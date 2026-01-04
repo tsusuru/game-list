@@ -29,7 +29,9 @@ class Game extends Model
     public function owner() {
         return $this->belongsTo(User::class, 'user_id');
     }
-    public function favourites() {
-        return $this->hasMany(Favourite::class);
+    public function favourites()
+    {
+        return $this->hasMany(\App\Models\Favourite::class);
     }
+
 }
